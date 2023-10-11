@@ -1,0 +1,27 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Create
+{% endblock %}
+
+{% block body %}
+    <h1 style="position: relative; left: 30%;">Create New page</h1>
+    <form method="GET" action="{% url 'createpage' %}">
+        {% csrf_token %}
+    <ul>
+        title:
+       <input placeholder="Title" name="title"   type="text" id="title"></ul>
+       <ul>
+        <div style="position: relative; top:20px ;">
+        Markdown:</div>
+       <input id="markdown" name="markdown" style="height: 100px; width: 320px; position: relative; bottom: 10px ; left: 90px; " placeholder="Markdown content for the page.">
+    </ul>
+    <ul>
+        <button type="submit">Create</button>
+    </ul>
+
+
+</form>
+{% endblock %}
+    {% csrf_token %}
+    
